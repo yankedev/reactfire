@@ -54,7 +54,7 @@ const SignInForm = () => {
 export const Auth = () => {
   return (
     <SuspenseWithPerf traceId={'firebase-user-wait'} fallback={<p>loading...</p>}>
-      <AuthCheck fallback={SignInForm}>
+      <AuthCheck fallback={<SignInForm/>}>
         <UserDetails />
       </AuthCheck>
     </SuspenseWithPerf>
